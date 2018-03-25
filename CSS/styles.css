@@ -2,8 +2,15 @@ html{
     height: 100%;
 }
 
+input[type=text] {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
 body {
-    //background-color: black;
+  
    margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -11,6 +18,12 @@ body {
     height: 100%;
 
     transition: 0.5s;
+}
+
+
+@keyframes reveal {
+    from    {opacity: 100}
+    to      {opacity: 0}
 }
 
 h1 {
