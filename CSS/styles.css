@@ -38,18 +38,48 @@ h1 {
     width: 300px;
 }
 
+@keyframes resizeimage {
+    from    {width: 100%;}
+    to      {width: 50%;}
+}
+
+@keyframes resizetext {
+    from    {font-size: 20px;}
+    to      {font-size: 10px;}
+}
+
+@keyframes moveUp {
+    from {top: 50%;}
+    to {top: 30%;}
+}
+
 .img {
     z-index: 1;
+    animation-name: resizeimage;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
 }
+
+
 
 .sadproblem {
     font-family: Book Antiqua, Palatino, Palatino Linotype, Palatino LT STD, Georgia, serif;
     font-size: 20px;
+    
+    z-index: 100;
+    animation-name: resizetext;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+
+.sadproblemdiv {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    animation-name: moveUp;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
 
 }
 
