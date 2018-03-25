@@ -1,0 +1,27 @@
+{
+  "name": "duckhacks2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "box.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsalgado98/duckhacks2018.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsalgado98/duckhacks2018/issues"
+  },
+  "homepage": "https://github.com/bsalgado98/duckhacks2018#readme"
+}
