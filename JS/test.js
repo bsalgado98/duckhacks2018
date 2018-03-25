@@ -1,12 +1,21 @@
 // single example
 function sendData(){
-    $.post(
-      'https://apiv2.indico.io/sentiment',
-      JSON.stringify({
-        'api_key': "a8fc73b43844d3af49810fa05da5bc65",
-        'data': "I love writing code!",
-      })
-    ).then(function(res) { console.log(res) });
+//    $.post(
+//      'https://apiv2.indico.io/sentimenthq',
+//      JSON.stringify({
+//        'api_key': "a8fc73b43844d3af49810fa05da5bc65",
+//        'data': "i just really want to die",
+//      })
+//    ).then(function(res) { 
+//        var value = res;
+//        if(value > .5){
+//            console.log(value) ;
+//        }
+//        else{
+//            console.log("you should seek help")
+//        }
+//                         
+//    });
 }
 
 //// Send a POST request
