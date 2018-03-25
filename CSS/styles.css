@@ -1,13 +1,30 @@
+body {
+    background-color: black;
+    transition: 0.5s;
+}
+
 h1 {
-    padding-top: 50px;
-    text-align: center
+    padding-top: 100px;
+    text-align: center;
+    font-family: Book Antiqua, Palatino, Palatino Linotype, Palatino LT STD, Georgia, serif;
+    color: white;
+    font-style: italic;
+}
+
+
+.button {
+    border-radius: 12px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.problem {
+    padding: 10px 40px;
+    font-size: 20px
 }
 
 .form1, .form2 {
     display: block;
     text-align: center;
-}
-
-.form2 {
     opacity:0;
 }
