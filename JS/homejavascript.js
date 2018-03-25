@@ -44,9 +44,8 @@ function onLoad2() {
     document.getElementById("p1").style.opacity = "1";
     document.getElementById("p1").style.transition = "opacity 1s";
     
-    //shrink image
-//    document.getElementById("img").style.width = "50%";
-//    document.getElementById("img").style.height = auto;
-//    document.getElementById("img").style.transition = "all 10s";
+    //make problem disappear
+    document.getElementById("container").style.opacity = "0";
+    document.getElementById("container").style.transition = "opacity 10s ";
     
 }

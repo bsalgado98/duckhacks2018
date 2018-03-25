@@ -50,7 +50,7 @@ h1 {
 
 @keyframes resizeimage {
     from    {width: 100%;}
-    to      {width: 50%;}
+    to      {width: 30%;}
 }
 
 @keyframes resizetext {
@@ -60,7 +60,7 @@ h1 {
 
 @keyframes moveUp {
     from {top: 50%;}
-    to {top: 30%;}
+    to {top: 20%;}
 }
 
 .img {
