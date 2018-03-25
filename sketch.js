@@ -1,18 +1,22 @@
-//button callback example
-var hit = false;
-function setup() {
-	createCanvas(1000,300);
-}
+var Engine = Matter.Engine,
+    World = Matter.World,
+    Bodies = Matter.Bodies;
+
+var engine;
+var world;
+var box1;
+
+function setup(){
+    createCanvas(1000,1000);
+    engine = Engine.create();
+    world = engine.world;
+    box = Bodies.rectangle(200,100,80,80);
+    Engine.run(engine);
+    World.add(world, box1);
+} 
 
 function draw(){
-	noStroke();
-	rect(400,100,200,100);
-
-	hit = collidePointRect(mouseX,mouseY,400,100,200,100); //see if the mouse is in the rect
-
-	if(hit){ //change color!
-		fill('purple')
-	}else{
-		fill('green')
-	}
+    background(51);
+    
+    rect(box1.position.x, box1.position.y, 80, 80);
 }
