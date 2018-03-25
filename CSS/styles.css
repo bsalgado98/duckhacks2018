@@ -2,6 +2,13 @@ html{
     height: 100%;
 }
 
+input[type=text] {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
 body {
   
    margin: 0;
@@ -14,6 +21,10 @@ body {
 }
 
 
+@keyframes reveal {
+    from    {opacity: 100}
+    to      {opacity: 0}
+}
 
 h1 {
     padding-top: 100px;
