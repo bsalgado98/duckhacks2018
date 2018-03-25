@@ -18,8 +18,15 @@ function onInput1() {
     localStorage.setItem("userinput", sth.value);
 }
 
-function FadeIn2() {
+function onLoad2() {
+    //change text opacity
     document.getElementById("p1").style.opacity = "1";
     document.getElementById("p1").style.transition = "opacity 1s";
+    
+    //shrink image
+    document.getElementById("img").style.width = "50%";
+    document.getElementById("img").style.transition = "width 10s";
+    document.getElementById("img").style.height = auto;
+    document.getElementById("img").style.transition = "height 10s";
 }
 
