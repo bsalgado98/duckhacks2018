@@ -1,18 +1,45 @@
-//button callback example
-var hit = false;
+var Engine = Matter.Engine,
+  // Render = Matter.Render,
+  World = Matter.World,
+  Bodies = Matter.Bodies;
+
+var engine;
+var world;
+var boxes = [];
+
+var ground;
+
 function setup() {
-	createCanvas(1000,300);
+  createCanvas(400, 400);
+  engine = Engine.create();
+  world = engine.world;
+  //Engine.run(engine);
+  var options = {
+    isStatic: true
+  }
+  ground = Bodies.rectangle(200, height, width, 100, options);
+
+  World.add(world, ground);
 }
 
-function draw(){
-	noStroke();
-	rect(400,100,200,100);
+// function keyPressed() {
+//   if (key == ' ') {
+//   }
+// }
 
-	hit = collidePointRect(mouseX,mouseY,400,100,200,100); //see if the mouse is in the rect
+function mousePressed() {
+  boxes.push(new Box(mouseX, mouseY, random(10, 40), random(10, 40)));
+}
 
-	if(hit){ //change color!
-		fill('purple')
-	}else{
-		fill('green')
-	}
+function draw() {
+  background(51);
+  Engine.update(engine);
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].show();
+  }
+  noStroke(255);
+  fill(170);
+  rectMode(CENTER);
+  rect(ground.position.x, ground.position.y, width, 100);
+
 }

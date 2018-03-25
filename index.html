@@ -5,23 +5,25 @@
         <title> Cool Meditation</title>
         
         <link rel= "stylesheet" href="CSS/styles.css">
+        <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="libraries/matter.js"></script>
     </head>
     
-    <body>
+    <body onload = "FadeIn()">
+        <div class = "form1" id = "form1" >
         <h1> What's bothering you?</h1>
-        <div class = "form1">
             <form>
-            <input type="text" id = "problem">
+            <input type="text" class = "problem" id = "problem">
             </form>
         <br>
-        <button type="button" onclick = "onInput1()" >Done</button>
+        <button class = "button" type="button" onclick = "onInput1()" >Done</button>
         </div>
         
         <div class = "form2" id = "form2">
             <h1 class = "second_question" id = "second_question"> Does it make you sad or angry?</h1>
 
-            <input type="button" value="Sad" onclick = "onInput2()">
-            <input type="button" value="Angry" onclick="onInput3()">
+            <button class = "button" type="button" onclick = "onInput2()" >Sad</button>
+            <button class = "button" type="button" onclick = "onInput3()" >Angry</button>
         </div>
         
         <p id="demo"></p>
