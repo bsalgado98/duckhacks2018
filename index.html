@@ -18,16 +18,20 @@
         <div class = "form1" id = "form1" >
             <h1> What's bothering you?</h1>
             <form>
-                <input type="text" class = "problem" id = "problem">
+                <input type="text" class = "problem" id = "problem">    
             </form>
+            <button class = "button" onclick="onInput1()">Done</button>
             <br>
-            <button class = "button" type="button" onclick = "onInput1()" >Done</button>
+            
         </div>
 
+<!--
         <script>
                 var sth = document.getElementById("problem");
                 localStorage.setItem("userinput", sth.value);
+                console.log(localStorage.getItem("userinput"));
         </script>
+-->
 
         <div class = "form2" id = "form2">
             <h1 class = "second_question" id = "second_question"> Does it make you sad or angry?</h1>
@@ -40,8 +44,12 @@
         <button class= "button" onclick = "sendData()"> Test script button </button>
 
         <script src="JS/homejavascript.js"></script>
+<<<<<<< HEAD
         <script src="JS/test.js"></script>
         <!-- <script src="JS/hopefullyWorks.js"></script> -->
+=======
+<!--        <script src="JS/hopefullyWorks.js"></script>-->
+>>>>>>> da31b942cba524e267dfeaa8b70068603618f060
 
 
     </body>

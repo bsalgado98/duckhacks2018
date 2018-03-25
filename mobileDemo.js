@@ -20,13 +20,12 @@
         _sceneHeight;
 
     var box2;
-    
+    console.log("1");
     Demo.init = function() {
-        var canvasContainer = document.getElementById('canvas-container'),
-            demoStart = document.getElementById('demo-start');
+        var canvasContainer = document.getElementById('canvas-container');
+            //demoStart = document.getElementById('demo-start');
         
-        
-            demoStart.style.display = 'none';
+            //canvasContainer.style.display = 'flex';
         
             _engine = Engine.create(canvasContainer, {
                 render: {
@@ -52,10 +51,10 @@
             Demo.updateGravity();
             Demo.updateScene();
             Demo.fullscreen();
-        }, false);
+        }, false); console.log("2");
     };
 
-    Demo.init();
+    document.addEventListener('DOMContentLoaded', Demo.init);
 
     Demo.mixed = function() {
         var _world = _engine.world;
@@ -104,9 +103,9 @@
 
         var boundsMax = _engine.world.bounds.max,
             //renderOptions = _engine.render.options,
-            var myRendOptions = {
-                
-            }
+//            var myRendOptions = {
+//                
+//            }
             renderOptions = Matter.Render.create()
             canvas = _engine.render.canvas;
 

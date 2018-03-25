@@ -12,10 +12,11 @@
         <h1 class = "p1" id = "p1"> Take a deep breath in ... </h1>
         
         <div class="container">
-            <img class = "img" src="/Images/cartoon-thought-bubble-md.png">
+            <img class = "img" src="../Images/cartoon-thought-bubble-md.png">
             <p class= "sadproblem" id = "sadproblem"></p>
             <script> 
                 //var user_input = "Hello I have an announcement to make"
+                console.log(localStorage.getItem("userinput"));
                 document.getElementById("sadproblem").innerHTML = localStorage.getItem("userinput");
                 //document.getElementById("sadproblem").innerHTML = "Hello";
             </script>
