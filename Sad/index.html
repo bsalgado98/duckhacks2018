@@ -9,8 +9,18 @@
     </head>
     
     <body onload = "onLoad2()">
-        <h1 class = "p1" id = "p1"> Take a deep breath in ... </h1>
-        
+        <h1 class = "p1" id = "p1"></h1>
+        <script>
+            var text = ["Take a deep breath in ...", "Watch your problem shrink away ...", "You have bigger better things to focus in life ..."];
+            var counter = 0;
+            var elem = document.getElementById("p1");
+            elem.innerHTML = text[counter];
+            var inst = setInterval(change, 5000);
+            function change() {
+                counter++;
+                elem.innerHTML = text[counter];
+            }
+        </script>
         <div class="container">
             <img class = "img" src="../Images/cartoon-thought-bubble-md.png" id="img">
             <div class="sadproblemdiv">
