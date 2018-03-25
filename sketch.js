@@ -5,7 +5,7 @@ var Engine = Matter.Engine,
 
 var engine;
 var world;
-var boxes = [];
+var box1;
 
 var ground;
 
@@ -20,6 +20,8 @@ function setup() {
   ground = Bodies.rectangle(200, height, width, 100, options);
 
   World.add(world, ground);
+    
+    box1 = new Box(width/2, height/2, 40, 40);
 }
 
 // function keyPressed() {
@@ -34,11 +36,9 @@ function mousePressed() {
 function draw() {
   background(51);
   Engine.update(engine);
-  for (var i = 0; i < boxes.length; i++) {
-    boxes[i].show();
-  }
+  box1.show;
   noStroke(255);
-  fill(170);
+  fill(170,30,50);
   rectMode(CENTER);
   rect(ground.position.x, ground.position.y, width, 100);
 
