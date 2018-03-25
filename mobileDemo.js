@@ -30,13 +30,18 @@
             _engine = Engine.create(canvasContainer, {
                 render: {
                     options: {
-                        wireframes: true,
-                        showAngleIndicator: true,
-                        showDebug: true
+//                        
+                    },
+                    sprite: {
+                        texture: 'Images/word.png'
                     }
                 }
             });
 
+        
+        
+        
+            
             Demo.fullscreen();
 
             setTimeout(function() {
@@ -51,7 +56,7 @@
             Demo.updateGravity();
             Demo.updateScene();
             Demo.fullscreen();
-        }, false); console.log("2");
+        }, false); console.log(localStorage.getItem("userinput"));
     };
 
     document.addEventListener('DOMContentLoaded', Demo.init);
@@ -80,16 +85,23 @@
 //        });
 //        
 //        World.add(_world, stack);
-        var options = {
-            friction: 0.3,
-            restitution: 0.6,
-            render: {
-                sprite: {
-                    texture: 'java-logo.png'
+//        var options = {
+//            friction: 0.3,
+//            restitution: 0.6,
+//            render: {
+//                sprite: {
+//                    texture: 'java-logo.png'
+//                }
+//            }
+//        }
+        box2 = Bodies.rectangle(300, 300, 450, 350,{
+                render: {
+                    strokeStyle: '#ffffff',
+                    sprite: {
+                        texture: 'Images/word.png'
+                    }
                 }
-            }
-        }
-        box2 = Bodies.rectangle(20, 20, 30, 30, options);
+            });
         World.add(_world, box2);
         
     };
@@ -102,11 +114,8 @@
         _sceneHeight = document.documentElement.clientHeight;
 
         var boundsMax = _engine.world.bounds.max,
-            //renderOptions = _engine.render.options,
-//            var myRendOptions = {
-//                
-//            }
-            renderOptions = Matter.Render.create()
+            renderOptions = _engine.render.options,
+            //renderOptions = Matter.Render.create()
             canvas = _engine.render.canvas;
 
         boundsMax.x = _sceneWidth;
@@ -166,5 +175,18 @@
         World.addBody(_world, Bodies.rectangle(_sceneWidth + offset, _sceneHeight * 0.5, 50.5, _sceneHeight + 0.5, { isStatic: true }));
         World.addBody(_world, Bodies.rectangle(-offset, _sceneHeight * 0.5, 50.5, _sceneHeight + 0.5, { isStatic: true }));
     };
-
+    
+    
 })();
+
+function setup() {
+  createCanvas(400, 400);
+  
+        console.log("heyy");
+  
+}
+    function draw() {
+        //Engine.update(_engine);
+    fill(170,30,50);
+    text('word', 10, 60);
+}
