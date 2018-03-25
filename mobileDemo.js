@@ -19,6 +19,8 @@
         _sceneWidth,
         _sceneHeight;
 
+    var box2;
+    
     Demo.init = function() {
         var canvasContainer = document.getElementById('canvas-container'),
             demoStart = document.getElementById('demo-start');
@@ -60,25 +62,37 @@
         
         Demo.reset();
 
-        World.add(_world, MouseConstraint.create(_engine));
+        //World.add(_world, MouseConstraint.create(_engine));
         
-        var stack = Composites.stack(20, 20, 10, 5, 0, 0, function(x, y, column, row) {
-            switch (Math.round(Common.random(0, 1))) {
-                
-            case 0:
-                if (Math.random() < 0.8) {
-                    return Bodies.rectangle(x, y, Common.random(20, 40), Common.random(20, 40), { friction: 0.01, restitution: 0.4 });
-                } else {
-                    return Bodies.rectangle(x, y, Common.random(80, 120), Common.random(20, 30), { friction: 0.01, restitution: 0.4 });
+//        var stack = Composites.stack(20, 20, 10, 5, 0, 0, function(x, y, column, row) {
+//            switch (Math.round(Common.random(0, 1))) {
+//                
+//            case 0:
+//                if (Math.random() < 0.8) {
+//                    return Bodies.rectangle(x, y, Common.random(20, 40), Common.random(20, 40), { friction: 0.01, restitution: 0.4 });
+//                } else {
+//                    return Bodies.rectangle(x, y, Common.random(80, 120), Common.random(20, 30), { friction: 0.01, restitution: 0.4 });
+//                }
+//                break;
+//            case 1:
+//                return Bodies.polygon(x, y, Math.round(Common.random(4, 6)), Common.random(20, 40), { friction: 0.01, restitution: 0.4 });
+//            
+//            }
+//        });
+//        
+//        World.add(_world, stack);
+        var options = {
+            friction: 0.3,
+            restitution: 0.6,
+            render: {
+                sprite: {
+                    texture: 'java-logo.png'
                 }
-                break;
-            case 1:
-                return Bodies.polygon(x, y, Math.round(Common.random(4, 6)), Common.random(20, 40), { friction: 0.01, restitution: 0.4 });
-            
             }
-        });
+        }
+        box2 = Bodies.rectangle(20, 20, 30, 30, options);
+        World.add(_world, box2);
         
-        World.add(_world, stack);
     };
     
     Demo.updateScene = function() {
