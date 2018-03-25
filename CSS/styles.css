@@ -3,7 +3,7 @@ html{
 }
 
 body {
-    //background-color: black;
+  
    margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,6 +12,8 @@ body {
 
     transition: 0.5s;
 }
+
+
 
 h1 {
     padding-top: 100px;
