@@ -1,6 +1,43 @@
+// single example
+function sendData(){
+    $.post(
+      'https://apiv2.indico.io/sentiment',
+      JSON.stringify({
+        'api_key': "a8fc73b43844d3af49810fa05da5bc65",
+        'data': "I love writing code!",
+      })
+    ).then(function(res) { console.log(res) });
+}
+
+//// Send a POST request
+//axios({
+//  method: 'post',
+//  url: '/user/12345',
+//  data: {
+//    firstName: 'Fred',
+//    lastName: 'Flintstone'
+//  }
+//});
+
+//function options(){
+//    //
+//}
+//
+//axios.post('http://text-processing.com/api/sentiment/', {
+//    data: "great",
+//  })
+//  .then(function (response) {
+//    console.log(response);
+//  })
+//  .catch(function (error) {
+//    console.log(error);
+//  });
+
+
+
 // $(document).ready(function(){
 //     $("button").click(function(){
-//         $.post("demo_test_post.asp",
+//         $.post("http://text-processing.com/api/sentiment/",
 //         {
 //           name: "Donald Duck",
 //           city: "Duckburg"
@@ -10,18 +47,30 @@
 //         });
 //     });
 // });
-
-var request = require('request');
-
-var dataString = 'text=great';
-
-var options = {
-    url: 'http://text-processing.com/api/sentiment/',
-    method: 'POST',
-    body: dataString
-};
-
-
+//
+//function sendData(){
+//     var request = require('request');
+//
+//     var dataString = 'text=great';
+//
+//     var options = {
+//          url: 'http://text-processing.com/api/sentiment/',
+//          method: 'POST',
+//          body: dataString
+//     };
+//
+//     function callback(error, response, body) {
+//          if (!error && response.statusCode == 200) {
+//               console.log(body);
+//          }
+//          console.log(body);
+//     }
+//
+//     request(options, callback);
+//
+//}
+//
+//
 // var url = "http://text-processing.com/api/sentiment/";
 // var method = "POST";
 // var postData = "Some data";
@@ -57,7 +106,26 @@ var options = {
 // // Actually sends the request to the server.
 // request.send(postData);
 //
+////
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
 // // // Imports the Google Cloud client library
 // // const language = require('@google-cloud/language');
 // //
