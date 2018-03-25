@@ -16,6 +16,23 @@ function onInput1() {
     //store input
     var sth = document.getElementById("problem");
     localStorage.setItem("userinput", sth.value);
+    
+    $.post(
+      'https://apiv2.indico.io/sentimenthq',
+      JSON.stringify({
+        'api_key': "a8fc73b43844d3af49810fa05da5bc65",
+        'data': localStorage.getItem("userinput"),
+      })
+    ).then(function(res) { 
+        var value = res;
+        if(value < .5){
+            console.log(value) ;
+        }
+        else{
+            console.log(localStorage.getItem("userinput"))
+        }
+                         
+    });
 }
 
 function onLoad2() {
