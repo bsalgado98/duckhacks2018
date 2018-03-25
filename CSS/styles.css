@@ -3,8 +3,11 @@ h1 {
     text-align: center
 }
 
-.form {
+.form1, .form2 {
     display: block;
     text-align: center;
-    
+}
+
+.form2 {
+    opacity:0;
 }
