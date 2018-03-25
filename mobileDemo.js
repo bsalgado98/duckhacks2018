@@ -25,7 +25,7 @@
         var canvasContainer = document.getElementById('canvas-container'),
             demoStart = document.getElementById('demo-start');
         
-        demoStart.addEventListener('click', function() {
+        
             demoStart.style.display = 'none';
         
             _engine = Engine.create(canvasContainer, {
@@ -44,7 +44,7 @@
                 Engine.run(_engine);
                 Demo.updateScene();
             }, 800);
-        });
+        
         
         window.addEventListener('deviceorientation', Demo.updateGravity, true);
         window.addEventListener('touchstart', Demo.fullscreen);
@@ -55,7 +55,7 @@
         }, false);
     };
 
-    window.addEventListener('load', Demo.init);
+    Demo.init();
 
     Demo.mixed = function() {
         var _world = _engine.world;
@@ -103,7 +103,11 @@
         _sceneHeight = document.documentElement.clientHeight;
 
         var boundsMax = _engine.world.bounds.max,
-            renderOptions = _engine.render.options,
+            //renderOptions = _engine.render.options,
+            var myRendOptions = {
+                
+            }
+            renderOptions = Matter.Render.create()
             canvas = _engine.render.canvas;
 
         boundsMax.x = _sceneWidth;
