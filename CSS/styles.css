@@ -1,7 +1,14 @@
+html{
+    height: 100%;
+}
+
 body {
     //background-color: black;
-   
-  background: radial-gradient(red, yellow, green);
+   margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  background: radial-gradient(#282342, black);
+    height: 100%;
 
     transition: 0.5s;
 }

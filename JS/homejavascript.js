@@ -49,4 +49,3 @@ function onLoad2() {
 //    document.getElementById("img").style.height = auto;
 //    document.getElementById("img").style.transition = "all 10s";
 }
-
