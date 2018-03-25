@@ -94,6 +94,7 @@
 //                }
 //            }
 //        }
+        World.add(_world, MouseConstraint.create(_engine));
         box2 = Bodies.rectangle(300, 300, 450, 350,{
                 render: {
                     strokeStyle: '#ffffff',
@@ -103,6 +104,15 @@
                 }
             });
         World.add(_world, box2);
+        box5 = Bodies.rectangle(200, 200, 50, 50,{
+                render: {
+                    strokeStyle: '#ffffff',
+                    sprite: {
+                        texture: 'Images/word.png'
+                    }
+                }
+            });
+        World.add(_world, box5);
         
     };
     
@@ -179,14 +189,3 @@
     
 })();
 
-function setup() {
-  createCanvas(400, 400);
-  
-        console.log("heyy");
-  
-}
-    function draw() {
-        //Engine.update(_engine);
-    fill(170,30,50);
-    text('word', 10, 60);
-}
