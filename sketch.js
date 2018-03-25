@@ -1,22 +1,45 @@
 var Engine = Matter.Engine,
-    World = Matter.World,
-    Bodies = Matter.Bodies;
+  // Render = Matter.Render,
+  World = Matter.World,
+  Bodies = Matter.Bodies;
 
 var engine;
 var world;
-var box1;
+var boxes = [];
 
-function setup(){
-    createCanvas(1000,1000);
-    engine = Engine.create();
-    world = engine.world;
-    box = Bodies.rectangle(200,100,80,80);
-    Engine.run(engine);
-    World.add(world, box1);
-} 
+var ground;
 
-function draw(){
-    background(51);
-    
-    rect(box1.position.x, box1.position.y, 80, 80);
+function setup() {
+  createCanvas(400, 400);
+  engine = Engine.create();
+  world = engine.world;
+  //Engine.run(engine);
+  var options = {
+    isStatic: true
+  }
+  ground = Bodies.rectangle(200, height, width, 100, options);
+
+  World.add(world, ground);
+}
+
+// function keyPressed() {
+//   if (key == ' ') {
+//   }
+// }
+
+function mousePressed() {
+  boxes.push(new Box(mouseX, mouseY, random(10, 40), random(10, 40)));
+}
+
+function draw() {
+  background(51);
+  Engine.update(engine);
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].show();
+  }
+  noStroke(255);
+  fill(170);
+  rectMode(CENTER);
+  rect(ground.position.x, ground.position.y, width, 100);
+
 }
