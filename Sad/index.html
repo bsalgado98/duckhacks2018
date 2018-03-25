@@ -19,6 +19,9 @@
             function change() {
                 counter++;
                 elem.innerHTML = text[counter];
+                if (counter == 2) {
+                clearInterval(inst); 
+                }
             }
         </script>
         <div class="container">
