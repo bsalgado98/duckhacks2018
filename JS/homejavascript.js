@@ -28,7 +28,7 @@ function onInput1() {
         var obj = JSON.parse(res);
         var value = obj.results;
         console.log(value);
-        if(value < .5){
+        if(value < .3){
             console.log("seek Help") ;
             alert("There is someone out there who cares. If you ever want to talk about something, call 1-800-273-8255. Much Love ❤");
         }
