@@ -1,5 +1,5 @@
 // single example
-function sendData(){
+//function sendData(){
 //    $.post(
 //      'https://apiv2.indico.io/sentimenthq',
 //      JSON.stringify({
