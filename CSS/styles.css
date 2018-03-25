@@ -67,8 +67,8 @@ h1 {
 }
 
 @keyframes resizetext {
-    from    {font-size: 20px;}
-    to      {font-size: 10px;}
+    from    {font-size: 100%;}
+    to      {font-size: 40%;}
 }
 
 @keyframes moveUp {
@@ -87,7 +87,7 @@ h1 {
 
 .sadproblem {
     font-family: Book Antiqua, Palatino, Palatino Linotype, Palatino LT STD, Georgia, serif;
-    font-size: 20px;
+    font-size: 30px;
     
     z-index: 100;
     animation-name: resizetext;
