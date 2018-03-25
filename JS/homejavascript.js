@@ -30,9 +30,10 @@ function onInput1() {
         console.log(value);
         if(value < .5){
             console.log("seek Help") ;
+            alert("There is someone out there who cares. If you ever want to talk about something, call 1-800-273-8255. Much Love ❤");
         }
         else{
-            console.log("you good fam")
+            console.log("you good fam, happy feels")
         }
                          
     });
