@@ -17,6 +17,7 @@ function onInput1() {
     var sth = document.getElementById("problem");
     localStorage.setItem("userinput", sth.value);
     
+    
     $.post(
       'https://apiv2.indico.io/sentimenthq',
       JSON.stringify({
@@ -24,12 +25,14 @@ function onInput1() {
         'data': localStorage.getItem("userinput"),
       })
     ).then(function(res) { 
-        var value = res;
+        var obj = JSON.parse(res);
+        var value = obj.results;
+        console.log(value);
         if(value < .5){
-            console.log(value) ;
+            console.log("seek Help") ;
         }
         else{
-            console.log(localStorage.getItem("userinput"))
+            console.log("you good fam")
         }
                          
     });
