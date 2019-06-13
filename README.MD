@@ -1,1 +1,1 @@
-https://donthatemeditate-affbf.firebaseapp.com/?
+https://donthatemeditate-affbf.firebaseapp.com/
